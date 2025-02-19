@@ -92,3 +92,21 @@ function speediCalculator(speed) {
     }
 }
 speediCalculator(900)
+
+// Question 7: ATM Withdrawal
+// A person wants to withdraw money from an ATM.
+// If the withdrawal amount is a multiple of 10, allow withdrawal.
+// If not, print an error message.
+// If the account balance is less than the withdrawal amount, print "Insufficient Funds".
+
+function aTMChecker(money, balance) {
+    if (money % 10 !== 0) {
+        console.log("Error: Withdrawal amount must be a multiple of 10.");
+    } else if (money > balance) {
+        console.log("Insufficient Funds");
+    } else {
+        console.log("Withdrawal successful");
+    }
+}
+
+aTMChecker(100, 150); 
