@@ -66,6 +66,7 @@ leapYearChecker(2025);
 // Question 5: Triangle Validity
 // Given three sides if a triangle, check  if they form a valid triangle,
 //  the sum of any two sides must be greater than the third 
+
 function triangleValidaionChecker(a,b,c) {
     if (a + b > c && b + c > a && a + c > b){
         console.log("The triangle is valid!")
@@ -75,3 +76,19 @@ function triangleValidaionChecker(a,b,c) {
 }
 triangleValidaionChecker(2,2,4)
 
+// Question 6:
+// Speeding Ticket Calculator
+// Speed limit = 60 km/h.
+// If a driver goes above the speed limit, they get a fine.
+// If they are driving over 100 km/h, they get double the fine.
+// Implement a program that takes speed as input and determines the fine.
+function speediCalculator(speed) {
+    let speedLimit = 60
+    if (speed > speedLimit && speed < 100) {
+        console.log(`You got a fine! your speed (${speed}) was higher than limit speed ${speedLimit}km/h`)
+    } else if (speed > 100) {
+        console.log(`You got a fine! your speed (${speed}) was higher than limit speed 100 km/h`)
+
+    }
+}
+speediCalculator(900)
