@@ -18,6 +18,7 @@ function checkNum(num) {
 // 70-79: C
 // 60-69: D
 // Below 60: F
+
 function gradeCalculator(num) {
     if (num > 100 || num < 0) {
         return "Invalid score! Please enter a number between 0-100.";
@@ -37,6 +38,16 @@ function gradeCalculator(num) {
     }
 }
 
-console.log(gradeCalculator(95));  // Output: "A"
-console.log(gradeCalculator(50));  // Output: "F"
-console.log(gradeCalculator(-5));  // Output: "Invalid score! Please enter a number between 0 and 100."
+// console.log(gradeCalculator(95)); 
+// console.log(gradeCalculator(50));  
+// console.log(gradeCalculator(-5));  
+
+// Third question: Write a program that takes two numbers as input and print the smaller number.
+
+function calculateSmallerNum(num1, num2) {
+    let smallerNumber = num1 < num2 ? num1 : num2;
+    console.log(`Smaller number is ${smallerNumber}`);
+}
+
+calculateSmallerNum(2, 5);
+
