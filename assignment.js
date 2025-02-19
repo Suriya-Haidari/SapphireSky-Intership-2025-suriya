@@ -12,7 +12,7 @@ function checkNum(num) {
 
 checkNum(3) // output: the number is even!
 
-//  Qestion 2: Given a student's scoore (0-100), document their letter grade based on the following scale: 
+// Given a student's scoore (0-100), document their letter grade based on the following scale: 
 // 90-100: A
 // 80-89: B
 // 70-79: C
