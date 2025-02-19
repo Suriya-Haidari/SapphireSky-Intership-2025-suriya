@@ -1,4 +1,4 @@
-// Question 1: write a program that takes a number as input and check if it is odd or even 
+// write a program that takes a number as input and check if it is odd or even 
 
 function checkNum(num) {
 
@@ -42,7 +42,7 @@ console.log(gradeCalculator(95));
 console.log(gradeCalculator(50));  
 console.log(gradeCalculator(-5));  
 
-// Third question: Write a program that takes two numbers as input and print the smaller number.
+// Thir/ ite a program that takes two numbers as input and print the smaller number.
 
 function calculateSmallerNum(num1, num2) {
     let smallerNumber = num1 < num2 ? num1 : num2;
@@ -51,7 +51,7 @@ function calculateSmallerNum(num1, num2) {
 
 calculateSmallerNum(2, 5);
 
-// Question 4: Leap year checker: A year is a leap year if it is divisible by 4 butnot 100, unless also divisible by 400.
+// Leap year checker: A year is a leap year if it is divisible by 4 butnot 100, unless also divisible by 400.
 // Write aprogram that determines if a given year is a leap year.
 
 function leapYearChecker(year) {
@@ -63,7 +63,7 @@ function leapYearChecker(year) {
 }
 leapYearChecker(2025);
 
-// Question 5: Triangle Validity
+// Triangle Validity
 // Given three sides if a triangle, check  if they form a valid triangle,
 //  the sum of any two sides must be greater than the third 
 
@@ -76,8 +76,7 @@ function triangleValidaionChecker(a,b,c) {
 }
 triangleValidaionChecker(2,2,4)
 
-// Question 6:
-// Speeding Ticket Calculator
+// // Speeding Ticket Calculator
 // Speed limit = 60 km/h.
 // If a driver goes above the speed limit, they get a fine.
 // If they are driving over 100 km/h, they get double the fine.
@@ -93,7 +92,7 @@ function speediCalculator(speed) {
 }
 speediCalculator(900)
 
-// Question 7: ATM Withdrawal
+// ATM Withdrawal
 // A person wants to withdraw money from an ATM.
 // If the withdrawal amount is a multiple of 10, allow withdrawal.
 // If not, print an error message.
@@ -110,3 +109,28 @@ function aTMChecker(money, balance) {
 }
 
 aTMChecker(100, 150); 
+
+// Body Mass Index (BMI) Calculator
+// Given weight (kg) and height (m), calculate BMI using BMI = weight / (height * height).
+// Categorize it into:
+// Underweight: BMI < 18.5
+// Normal weight: 18.5 ≤ BMI < 25
+// Overweight: 25 ≤ BMI < 30
+// Obese: BMI ≥ 30
+function bMICalculato(weight, height) {
+    let BMI = weight / (height * height);
+    
+    if (BMI < 18.5) {
+        console.log("Underweight");
+    } else if (BMI >= 18.5 && BMI < 25) {
+        console.log("Normal weight");
+    } else if (BMI >= 25 && BMI < 30) {
+        console.log("Overweight");
+    } else if (BMI >= 30) {
+        console.log("Obese");
+    } 
+}
+bMICalculato(50, 1.75); 
+bMICalculato(70, 1.75); 
+bMICalculato(85, 1.75); 
+bMICalculato(110, 1.75); 
