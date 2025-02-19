@@ -62,3 +62,16 @@ function leapYearChecker(year) {
     }
 }
 leapYearChecker(2025);
+
+// Question 5: Triangle Validity
+// Given three sides if a triangle, check  if they form a valid triangle,
+//  the sum of any two sides must be greater than the third 
+function triangleValidaionChecker(a,b,c) {
+    if (a + b > c && b + c > a && a + c > b){
+        console.log("The triangle is valid!")
+    } else {
+        console.log("Triangle isn't valid!")
+    }
+}
+triangleValidaionChecker(2,2,4)
+
