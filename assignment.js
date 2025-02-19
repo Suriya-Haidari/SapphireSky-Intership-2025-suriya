@@ -10,7 +10,7 @@ function checkNum(num) {
     return 
 }
 
-// checkNum(3) // output: the number is even!
+checkNum(3) // output: the number is even!
 
 //  Qestion 2: Given a student's scoore (0-100), document their letter grade based on the following scale: 
 // 90-100: A
@@ -38,9 +38,9 @@ function gradeCalculator(num) {
     }
 }
 
-// console.log(gradeCalculator(95)); 
-// console.log(gradeCalculator(50));  
-// console.log(gradeCalculator(-5));  
+console.log(gradeCalculator(95)); 
+console.log(gradeCalculator(50));  
+console.log(gradeCalculator(-5));  
 
 // Third question: Write a program that takes two numbers as input and print the smaller number.
 
@@ -51,3 +51,14 @@ function calculateSmallerNum(num1, num2) {
 
 calculateSmallerNum(2, 5);
 
+// Question 4: Leap year checker: A year is a leap year if it is divisible by 4 butnot 100, unless also divisible by 400.
+// Write aprogram that determines if a given year is a leap year.
+
+function leapYearChecker(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        console.log(`${year} is a leap year.`);
+    } else {
+        console.log(`${year} is not a leap year.`);
+    }
+}
+leapYearChecker(2025);
