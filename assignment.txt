@@ -1,0 +1,6 @@
+1. What is the difference between var, let, and const in JavaScript?
+Answer: 
+var is globally scoped and can be redeclared and updated within its scope.
+let is block-scoped and can be updated but not redeclared in the same scope.
+const is block-scoped and cannot be updated or redeclared after its initialization.
+

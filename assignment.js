@@ -1,3 +1,17 @@
+
+// closure example: 
+function outerFunction() {
+    let counter = 0;
+    return function innerFunction() {
+      counter++;
+      console.log(counter);
+    }
+  }
+  const increment = outerFunction();
+  increment();  // 1
+  increment();  // 2
+  
+
 // write a program that takes a number as input and check if it is odd or even 
 
 function checkNum(num) {
@@ -11,6 +25,8 @@ function checkNum(num) {
 }
 
 checkNum(3) // output: the number is even!
+
+
 
 // Given a student's scoore (0-100), document their letter grade based on the following scale: 
 // 90-100: A
@@ -134,3 +150,4 @@ bMICalculato(50, 1.75);
 bMICalculato(70, 1.75); 
 bMICalculato(85, 1.75); 
 bMICalculato(110, 1.75); 
+
