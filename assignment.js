@@ -1,5 +1,4 @@
-
-// closure example: 
+// closure example:
 function outerFunction() {
     let counter = 0;
     return function innerFunction() {
@@ -11,8 +10,17 @@ function outerFunction() {
   increment();  // 1
   increment();  // 2
   
+// this keyword example 
+let thisEx = {
+    name: 'Suriya',
+    lastName: "Haidari",
+    info: function personInfo() {
+        console.log("user information" + " " + this.name, this.lastName)
+    }
+}
+thisEx.info()
 
-// write a program that takes a number as input and check if it is odd or even 
+// write a program that takes a number as input and check if it is odd or even
 
 function checkNum(num) {
 
