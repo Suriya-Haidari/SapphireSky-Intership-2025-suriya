@@ -20,6 +20,15 @@ let thisEx = {
 }
 thisEx.info()
 
+
+//  Write a function to find the sum of all numbers in an array.
+function sumArray(arr) {
+    return arr.reduce((sum, num) => sum + num, 0);
+  }
+  console.log(sumArray([1, 2, 3, 4]));  // 10
+  
+
+
 // write a program that takes a number as input and check if it is odd or even
 
 function checkNum(num) {
