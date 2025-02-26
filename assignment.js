@@ -192,3 +192,54 @@ function electricityCalculator(units) {
 }
 
 console.log(electricityCalculator(150)); 
+
+
+// Password Strength Checker
+// A strong password must:
+// Be at least 8 characters long.
+// Contain at least one uppercase letter, one lowercase letter, and one number.
+// Write a program that checks if a given password is strong or weak.
+function checkPasswordStrength(password) {
+    // Password must be at least 8 characters long
+    if (password.length < 8) {
+        return "Weak: Password must be at least 8 characters long.";
+    }
+
+    // Flags to check if the password contains the required characters
+    let hasUpperCase = false;
+    let hasLowerCase = false;
+    let hasNumber = false;
+
+    // Loop through each character in the password
+    for (let i = 0; i < password.length; i++) {
+        let char = password[i];
+        
+        // Check for uppercase letter
+        if (char >= 'A' && char <= 'Z') {
+            hasUpperCase = true;
+        }
+        
+        // Check for lowercase letter
+        if (char >= 'a' && char <= 'z') {
+            hasLowerCase = true;
+        }
+        
+        // Check for number
+        if (char >= '0' && char <= '9') {
+            hasNumber = true;
+        }
+    }
+
+    // Check if all conditions are met
+    if (hasUpperCase && hasLowerCase && hasNumber) {
+        return "Strong: Password meets all the conditions.";
+    } else {
+        return "Weak: Password must contain at least one uppercase letter, one lowercase letter, and one number.";
+    }
+}
+
+// Example usage:
+console.log(checkPasswordStrength("Password1")); // Strong
+console.log(checkPasswordStrength("weakpass")); // Weak
+console.log(checkPasswordStrength("12345")); // Weak
+console.log(checkPasswordStrength("SHORT")); // Weak
