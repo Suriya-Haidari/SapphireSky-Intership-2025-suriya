@@ -238,7 +238,6 @@ function checkPasswordStrength(password) {
     }
 }
 
-// Example usage:
 console.log(checkPasswordStrength("Password1")); // Strong
 console.log(checkPasswordStrength("weakpass")); // Weak
 console.log(checkPasswordStrength("12345")); // Weak
