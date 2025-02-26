@@ -2,14 +2,14 @@
 function outerFunction() {
     let counter = 0;
     return function innerFunction() {
-      counter++;
-      console.log(counter);
+        counter++;
+        console.log(counter);
     }
-  }
-  const increment = outerFunction();
-  increment();  // 1
-  increment();  // 2
-  
+}
+const increment = outerFunction();
+increment();  // 1
+increment();  // 2
+
 // this keyword example 
 let thisEx = {
     name: 'Suriya',
@@ -24,9 +24,9 @@ thisEx.info()
 //  Write a function to find the sum of all numbers in an array.
 function sumArray(arr) {
     return arr.reduce((sum, num) => sum + num, 0);
-  }
-  console.log(sumArray([1, 2, 3, 4]));  // 10
-  
+}
+console.log(sumArray([1, 2, 3, 4]));  // 10
+
 
 
 // write a program that takes a number as input and check if it is odd or even
@@ -38,7 +38,7 @@ function checkNum(num) {
     } else {
         console.log("The number is odd!")
     }
-    return 
+    return
 }
 
 checkNum(3) // output: the number is even!
@@ -71,9 +71,9 @@ function gradeCalculator(num) {
     }
 }
 
-console.log(gradeCalculator(95)); 
-console.log(gradeCalculator(50));  
-console.log(gradeCalculator(-5));  
+console.log(gradeCalculator(95));
+console.log(gradeCalculator(50));
+console.log(gradeCalculator(-5));
 
 // Thir/ ite a program that takes two numbers as input and print the smaller number.
 
@@ -100,14 +100,14 @@ leapYearChecker(2025);
 // Given three sides if a triangle, check  if they form a valid triangle,
 //  the sum of any two sides must be greater than the third 
 
-function triangleValidaionChecker(a,b,c) {
-    if (a + b > c && b + c > a && a + c > b){
+function triangleValidaionChecker(a, b, c) {
+    if (a + b > c && b + c > a && a + c > b) {
         console.log("The triangle is valid!")
     } else {
         console.log("Triangle isn't valid!")
     }
 }
-triangleValidaionChecker(2,2,4)
+triangleValidaionChecker(2, 2, 4)
 
 // // Speeding Ticket Calculator
 // Speed limit = 60 km/h.
@@ -141,7 +141,7 @@ function aTMChecker(money, balance) {
     }
 }
 
-aTMChecker(100, 150); 
+aTMChecker(100, 150);
 
 // Body Mass Index (BMI) Calculator
 // Given weight (kg) and height (m), calculate BMI using BMI = weight / (height * height).
@@ -152,7 +152,7 @@ aTMChecker(100, 150);
 // Obese: BMI ≥ 30
 function bMICalculato(weight, height) {
     let BMI = weight / (height * height);
-    
+
     if (BMI < 18.5) {
         console.log("Underweight");
     } else if (BMI >= 18.5 && BMI < 25) {
@@ -161,10 +161,34 @@ function bMICalculato(weight, height) {
         console.log("Overweight");
     } else if (BMI >= 30) {
         console.log("Obese");
-    } 
+    }
 }
-bMICalculato(50, 1.75); 
-bMICalculato(70, 1.75); 
-bMICalculato(85, 1.75); 
-bMICalculato(110, 1.75); 
+bMICalculato(50, 1.75);
+bMICalculato(70, 1.75);
+bMICalculato(85, 1.75);
+bMICalculato(110, 1.75);
 
+// Electricity Bill Calculator
+// Units Consumed:
+// Up to 100 units: $0.50 per unit
+// 101 to 200 units: $0.75 per unit
+// 201 to 500 units: $1.20 per unit
+// Above 500 units: $1.50 per unit
+
+function electricityCalculator(units) {
+    let cost;
+
+    if (units <= 100) {
+        cost = units * 0.50;
+    } else if (units <= 200) {
+        cost = units * 0.75;
+    } else if (units <= 500) {
+        cost = units * 1.20;
+    } else {
+        cost = units * 1.50;
+    }
+
+    return `$${cost.toFixed(2)}`;
+}
+
+console.log(electricityCalculator(150)); 
