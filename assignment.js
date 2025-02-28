@@ -335,3 +335,29 @@ function isPrime(num) {
     }
     console.log(`${number}! = ${factorial}`)
   }
+
+
+//   Find Largest and Smallest in a List
+// Given an array of numbers, find the largest and smallest numbers using a loop.
+
+function smallestAndLargestNums() {
+    let array = [1,2,3,4,5,6,7,8,9];
+
+    let smallestNum = array[0];
+    let largestNum = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+
+        if ( array[i] < smallestNum ) {
+            smallestNum = array[i];
+        } 
+        
+        if ( array[i] > largestNum) {
+            largestNum = array[i]
+        }
+
+    }        
+    return { largestNum, smallestNum }
+}
+
+console.log(smallestAndLargestNums());
