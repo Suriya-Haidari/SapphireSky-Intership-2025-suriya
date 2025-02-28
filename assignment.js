@@ -275,3 +275,11 @@ function reverseNumber(n) {
   
   console.log(reverseNumber(1234)); 
   
+// Count Digits in a Number
+// Take a number as input and count how many digits it has.
+
+function digitsCalculator(num) {
+    return num.toString().length
+}
+
+console.log(digitsCalculator(10));
