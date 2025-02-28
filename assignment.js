@@ -361,3 +361,124 @@ function smallestAndLargestNums() {
 }
 
 console.log(smallestAndLargestNums());
+
+
+
+// Fibonacci Sequence
+// Print the first N Fibonacci numbers using a loop.
+
+function fibonacciSequence(N) {
+    // Initialize the first two Fibonacci numbers
+    let a = 0;
+    let b = 1;
+
+    if (N === 1) {
+        console.log(a);
+        return;
+    }
+
+    // Print the first two Fibonacci numbers
+    console.log(a);
+    console.log(b);
+
+    // Calculate and print the rest of the Fibonacci numbers
+    for (let i = 3; i <= N; i++) {
+        let next = a + b;   // Sum of the previous two numbers
+        console.log(next);
+        a = b;  // Update a to the last number
+        b = next;  // Update b to the current number
+    }
+}
+
+fibonacciSequence(10);  // Prints the first 10 Fibonacci numbers
+
+
+// Collatz Sequence (Hailstone Numbers)
+// Take a number n.
+// If n is even, divide it by 2.
+// If n is odd, multiply it by 3 and add 1.
+// Repeat this process until n = 1.
+// Count how many steps it takes to reach 1.
+
+function collatzSequence(n) {
+    let steps = 0;
+    
+    for (; n !== 1; steps++) {
+        if (n % 2 === 0) {
+            n = n / 2; 
+        } else {
+            n = 3 * n + 1;  
+        }
+    }
+
+    console.log("It took " + steps + " steps to reach 1.");
+}
+
+collatzSequence(6);  
+
+
+// function findGCD(a, b) {
+//     let min = a < b ? a : b;
+//     let gcd = 1;
+
+//     for (let i = 1; i <= min; i++) {
+//         if (a % i === 0 && b % i === 0) {
+//             gcd = i; 
+//         }
+//     }
+
+//     return gcd;
+// }
+
+// console.log(findGCD(12, 15));
+
+
+
+// Pattern Printing - Pyramid
+// Write a program that prints this pattern for N = 5:
+// markdown
+// CopyEdit
+//    *  
+//   ***  
+//  *****  
+// *******  
+
+// function printPyramid(N) {
+//     for (let i = 1; i <= N; i++) {
+//         let spaces = ' '.repeat(N - i); // Number of spaces
+//         let stars = '*'.repeat(2 * i - 1); // Number of stars
+        
+//         // Print each row
+//         console.log(spaces + stars);
+//     }
+// }
+
+// Example usage
+// printPyramid(5);
+
+
+// Number Guessing Game
+// - The program randomly selects a number between 1 and 100.
+// - The user must guess the number.
+// - The program gives hints like "Too High" or "Too Low".
+// - The loop continues until the user guesses correctly.
+
+function guessNumber(userGuess) {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+    if (userGuess < 1) {
+        console.log("The number should be greater than 0!");
+    } else if (userGuess > 100) {
+        console.log("Hint: The number should be less than 100!");
+    } else if (userGuess === randomNumber) {
+        console.log("Congratulations! You guessed the right number.");
+    } else if (userGuess > randomNumber) {
+        console.log("Too High!");
+    } else if (userGuess < randomNumber) {
+        console.log("Too Low!");
+    }
+
+    return randomNumber;
+}
+
+console.log(guessNumber(19)); 
