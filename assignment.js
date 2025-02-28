@@ -262,3 +262,16 @@ function multiplicationOfNumbers(n) {
     }
 }
 multiplicationOfNumbers(5);
+
+// Reverse a Number
+// Given an integer, reverse its digits. (Example: 1234 → 4321)
+function reverseNumber(n) {
+    let reversed = 0;
+    for (; n > 0; n = (n - (n % 10)) / 10) {
+      reversed = reversed * 10 + (n % 10);
+    }
+    return reversed;
+  }
+  
+  console.log(reverseNumber(1234)); 
+  
