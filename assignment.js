@@ -283,3 +283,55 @@ function digitsCalculator(num) {
 }
 
 console.log(digitsCalculator(10));
+
+
+
+// Check for Prime Number
+// Write a program that takes a number as input and checks if it is prime.
+
+function isPrime(num) {
+    if (num <= 1) {
+      return false; // Numbers less than or equal to 1 are not prime
+    }
+    
+    // Check divisibility from 2 to num/2
+    for (let i = 2; i <= num / 2; i++) {
+      if (num % i === 0) {
+        return false; // If divisible, it's not prime
+      }
+    }
+    
+    return true; // If no divisors were found, the number is prime
+  }
+  
+  console.log(isPrime(11));
+  
+
+// Factorial of a Number
+// Implement a function that calculates the factorial of a number using a loop.
+// function factorial(n) {
+//     let result = 1; 
+  
+//     // Loop through numbers from 1 to n
+//     for (let i = 1; i <= n; i++) {
+//         result = result * i
+//     }
+  
+//     return result; 
+//   }
+  
+//   console.log(factorial(5));  // Output: 120
+
+
+  let number = 6;
+
+  let factorial = 1;
+
+  if (number < 0) {
+    console.log("Can not funs the factorila for negative number!")
+  } else  {
+    for (let num = 2; num <= number; num++) {
+        factorial = factorial * num;
+    }
+    console.log(`${number}! = ${factorial}`)
+  }
