@@ -232,15 +232,6 @@ passwordChecker("Hello");
 
 // Print Numbers from 1 to 100
 // Write a for loop that prints numbers from 1 to 100.
-// Sum of First N Natural Numbers
-// Write a program that takes N as input and calculates the sum of the first N natural numbers.
-// Multiplication Table
-// Ask the user for a number and print its multiplication table up to 10.
-// Reverse a Number
-// Given an integer, reverse its digits. (Example: 1234 → 4321)
-
-
-// Write a for loop that prints numbers from 1 to 100.
 
 function sumOfNumbers() {
     for (let i = 1; i < 100; i++) {
@@ -250,6 +241,8 @@ function sumOfNumbers() {
 
 sumOfNumbers()
 
+
+// Sum of First N Natural Numbers
 // Write a program that takes N as input and calculates the sum of the first N natural numbers.
 
 function sumOfNumbers(n) {
@@ -257,5 +250,15 @@ function sumOfNumbers(n) {
 return n * ( n + 1) / 2
    
 }
-
 console.log(sumOfNumbers(5));
+
+
+// Multiplication Table
+// Ask the user for a number and print its multiplication table up to 10.
+
+function multiplicationOfNumbers(n) {
+    for (let i = 0; i <= 10; i++) {
+        console.log(`${n} \u00D7 ${i} = ${n * i} `)        
+    }
+}
+multiplicationOfNumbers(5);
