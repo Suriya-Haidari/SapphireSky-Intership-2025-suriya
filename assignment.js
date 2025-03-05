@@ -168,31 +168,6 @@ bmiCalculator(70, 1.75);
 bmiCalculator(85, 1.75);
 bmiCalculator(110, 1.75);
 
-// Electricity Bill Calculator
-// Units Consumed:
-// Up to 100 units: $0.50 per unit
-// 101 to 200 units: $0.75 per unit
-// 201 to 500 units: $1.20 per unit
-// Above 500 units: $1.50 per unit
-
-function calculateElectricityBill(units) {
-    let billAmount = 0;
-
-    if (units <= 100) {
-        billAmount = units * 0.50;
-    } else if (units <= 200) {
-        billAmount = (100 * 0.50) + ((units - 100) * 0.75);
-    } else if (units <= 500) {
-        billAmount = (100 * 0.50) + (100 * 0.75) + ((units - 200) * 1.20);
-    } else {
-        billAmount = (100 * 0.50) + (100 * 0.75) + (300 * 1.20) + ((units - 500) * 1.50);
-    }
-
-    return billAmount.toFixed(2); 
-}
-
-console.log("Electricity Bill: $" + calculateElectricityBill(250)); // Output: Electricity Bill: $210.00
-
 
 // Password Strength Checker
 // A strong password must:
@@ -424,6 +399,20 @@ function collatzSequence(n) {
 collatzSequence(6);  
 
 
+// function findGCD(a, b) {
+//     let min = a < b ? a : b;
+//     let gcd = 1;
+
+//     for (let i = 1; i <= min; i++) {
+//         if (a % i === 0 && b % i === 0) {
+//             gcd = i; 
+//         }
+//     }
+
+//     return gcd;
+// }
+
+// console.log(findGCD(12, 15));
 
 
 
