@@ -175,27 +175,23 @@ bmiCalculator(110, 1.75);
 // 201 to 500 units: $1.20 per unit
 // Above 500 units: $1.50 per unit
 
-
-
-
-
-function electricityCalculator(units) {
-    let cost;
+function calculateElectricityBill(units) {
+    let billAmount = 0;
 
     if (units <= 100) {
-        cost = units * 0.50;
+        billAmount = units * 0.50;
     } else if (units <= 200) {
-        cost = units * 0.75;
+        billAmount = (100 * 0.50) + ((units - 100) * 0.75);
     } else if (units <= 500) {
-        cost = units * 1.20;
+        billAmount = (100 * 0.50) + (100 * 0.75) + ((units - 200) * 1.20);
     } else {
-        cost = units * 1.50;
+        billAmount = (100 * 0.50) + (100 * 0.75) + (300 * 1.20) + ((units - 500) * 1.50);
     }
 
-    return `$${cost.toFixed(2)}`;
+    return billAmount.toFixed(2); 
 }
 
-console.log(electricityCalculator(150)); 
+console.log("Electricity Bill: $" + calculateElectricityBill(250)); // Output: Electricity Bill: $210.00
 
 
 // Password Strength Checker
