@@ -131,7 +131,7 @@ speediCalculator(900)
 // If not, print an error message.
 // If the account balance is less than the withdrawal amount, print "Insufficient Funds".
 
-function aTMChecker(money, balance) {
+function atmChecker(money, balance) {
     if (money % 10 !== 0) {
         console.log("Error: Withdrawal amount must be a multiple of 10.");
     } else if (money > balance) {
@@ -141,7 +141,7 @@ function aTMChecker(money, balance) {
     }
 }
 
-aTMChecker(100, 150);
+atmChecker(100, 150);
 
 // Body Mass Index (BMI) Calculator
 // Given weight (kg) and height (m), calculate BMI using BMI = weight / (height * height).
@@ -150,7 +150,7 @@ aTMChecker(100, 150);
 // Normal weight: 18.5 ≤ BMI < 25
 // Overweight: 25 ≤ BMI < 30
 // Obese: BMI ≥ 30
-function bMICalculato(weight, height) {
+function bmiCalculator(weight, height) {
     let BMI = weight / (height * height);
 
     if (BMI < 18.5) {
@@ -163,10 +163,10 @@ function bMICalculato(weight, height) {
         console.log("Obese");
     }
 }
-bMICalculato(50, 1.75);
-bMICalculato(70, 1.75);
-bMICalculato(85, 1.75);
-bMICalculato(110, 1.75);
+bmiCalculator(50, 1.75);
+bmiCalculator(70, 1.75);
+bmiCalculator(85, 1.75);
+bmiCalculator(110, 1.75);
 
 // Electricity Bill Calculator
 // Units Consumed:
@@ -174,6 +174,10 @@ bMICalculato(110, 1.75);
 // 101 to 200 units: $0.75 per unit
 // 201 to 500 units: $1.20 per unit
 // Above 500 units: $1.50 per unit
+
+
+
+
 
 function electricityCalculator(units) {
     let cost;
@@ -233,13 +237,13 @@ passwordChecker("Hello");
 // Print Numbers from 1 to 100
 // Write a for loop that prints numbers from 1 to 100.
 
-function sumOfNumbers() {
+function printNumbers() {
     for (let i = 1; i < 100; i++) {
         console.log(i)
     }
 }
 
-sumOfNumbers()
+printNumbers()
 
 
 // Sum of First N Natural Numbers
@@ -261,20 +265,26 @@ function multiplicationOfNumbers(n) {
         console.log(`${n} \u00D7 ${i} = ${n * i} `)        
     }
 }
+
+
 multiplicationOfNumbers(5);
 
 // Reverse a Number
 // Given an integer, reverse its digits. (Example: 1234 → 4321)
 function reverseNumber(n) {
     let reversed = 0;
-    for (; n > 0; n = (n - (n % 10)) / 10) {
-      reversed = reversed * 10 + (n % 10);
+
+    while (n > 0) {
+        let lastDigit = n % 10; 
+        reversed = reversed * 10 + lastDigit; 
+        n = Math.floor(n / 10); 
     }
+
     return reversed;
-  }
-  
-  console.log(reverseNumber(1234)); 
-  
+}
+
+console.log(reverseNumber(1234)); // Output: 4321
+
 // Count Digits in a Number
 // Take a number as input and count how many digits it has.
 
@@ -309,32 +319,32 @@ function isPrime(num) {
 
 // Factorial of a Number
 // Implement a function that calculates the factorial of a number using a loop.
-// function factorial(n) {
-//     let result = 1; 
+function factorial(n) {
+    let result = 1; 
   
-//     // Loop through numbers from 1 to n
-//     for (let i = 1; i <= n; i++) {
-//         result = result * i
-//     }
-  
-//     return result; 
-//   }
-  
-//   console.log(factorial(5));  // Output: 120
-
-
-  let number = 6;
-
-  let factorial = 1;
-
-  if (number < 0) {
-    console.log("Can not funs the factorila for negative number!")
-  } else  {
-    for (let num = 2; num <= number; num++) {
-        factorial = factorial * num;
+    // Loop through numbers from 1 to n
+    for (let i = 1; i <= n; i++) {
+        result = result * i
     }
-    console.log(`${number}! = ${factorial}`)
+  
+    return result; 
   }
+  
+  console.log(factorial(5));  // Output: 120
+
+
+//   let number = 6;
+
+//   let factorial = 1;
+
+//   if (number < 0) {
+//     console.log("Can not funs the factorila for negative number!")
+//   } else  {
+//     for (let num = 2; num <= number; num++) {
+//         factorial = factorial * num;
+//     }
+//     console.log(`${number}! = ${factorial}`)
+//   }
 
 
 //   Find Largest and Smallest in a List
@@ -402,13 +412,14 @@ fibonacciSequence(10);  // Prints the first 10 Fibonacci numbers
 
 function collatzSequence(n) {
     let steps = 0;
-    
-    for (; n !== 1; steps++) {
+
+    while (n !== 1) {
         if (n % 2 === 0) {
-            n = n / 2; 
+            n = n / 2;
         } else {
-            n = 3 * n + 1;  
+            n = 3 * n + 1;
         }
+        steps++;
     }
 
     console.log("It took " + steps + " steps to reach 1.");
@@ -463,22 +474,40 @@ collatzSequence(6);
 // - The program gives hints like "Too High" or "Too Low".
 // - The loop continues until the user guesses correctly.
 
-function guessNumber(userGuess) {
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    
-    if (userGuess < 1) {
-        console.log("The number should be greater than 0!");
-    } else if (userGuess > 100) {
-        console.log("Hint: The number should be less than 100!");
-    } else if (userGuess === randomNumber) {
-        console.log("Congratulations! You guessed the right number.");
-    } else if (userGuess > randomNumber) {
-        console.log("Too High!");
-    } else if (userGuess < randomNumber) {
-        console.log("Too Low!");
-    }
+function numberGuessingGame() {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+    let guess = null;
 
-    return randomNumber;
+    console.log("Welcome to the Number Guessing Game!");
+    console.log("I have selected a number between 1 and 100. Try to guess it!");
+
+    while (guess !== randomNumber) {
+        guess = parseInt(prompt("Enter your guess (1-100):"), 10);
+        attempts++;
+
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            console.log("Please enter a valid number between 1 and 100.");
+            continue;
+        }
+
+        if (guess < randomNumber) {
+            console.log("Too Low! Try again.");
+        } else if (guess > randomNumber) {
+            console.log("Too High! Try again.");
+        } else {
+            console.log(`Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.`);
+            break;
+        }
+    }
 }
 
-console.log(guessNumber(19)); 
+// Call the function to start the game
+numberGuessingGame();
+
+
+
+
+// Convert Celsius to Fahrenheit
+// Write a function celsiusToFahrenheit(celsius) that converts a temperature from Celsius to Fahrenheit using the formula:
+// F=(C×95)+32F = (C \times \frac{9}{5}) + 32F=(C×59​)+32
