@@ -424,20 +424,6 @@ function collatzSequence(n) {
 collatzSequence(6);  
 
 
-// function findGCD(a, b) {
-//     let min = a < b ? a : b;
-//     let gcd = 1;
-
-//     for (let i = 1; i <= min; i++) {
-//         if (a % i === 0 && b % i === 0) {
-//             gcd = i; 
-//         }
-//     }
-
-//     return gcd;
-// }
-
-// console.log(findGCD(12, 15));
 
 
 
