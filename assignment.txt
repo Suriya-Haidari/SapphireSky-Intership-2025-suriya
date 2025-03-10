@@ -1,0 +1,39 @@
+1. What is the difference between var, let, and const in JavaScript?
+Answer: 
+var is globally scoped and can be redeclared and updated within its scope.
+let is block-scoped and can be updated but not redeclared in the same scope.
+const is block-scoped and cannot be updated or redeclared after its initialization.
+
+
+2. Explain the difference between == and === in JavaScript.
+Answer: 
+== (loose equality) compares values after performing type conversion if necessary.
+=== (strict equality) compares both values and types, without type conversion.
+
+
+3. What are JavaScript closures? Provide an example.
+Answer:
+A closure is a function that retains access to its lexical scope, even after the outer function has finished executing.
+
+
+4. How does the this keyword work in JavaScript? Provide an example.
+Answer:
+this refers to the object from which the function is called.
+In global scope, it refers to the global object (window in browsers).
+Inside an object method, this refers to the object itself.
+
+
+5. Explain the concept of hoisting in JavaScript.
+Answer:
+Hoisting is a JavaScript behavior where variable
+and function declarations are moved to the top of their containing scope during the compilation phase,
+before code execution.
+However, only the declarations are hoisted, not the assignments.
+
+
+
+6. What are arrow functions in JavaScript, and how are they different from regular functions?
+Answer:
+Arrow functions are a more concise way to write functions,
+Arrow functions don't have their own this.
+They are more concise in syntax.
