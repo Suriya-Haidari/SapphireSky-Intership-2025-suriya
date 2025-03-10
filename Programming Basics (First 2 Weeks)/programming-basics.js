@@ -1,3 +1,6 @@
+import checkElements from '../Data%20Structures(Next%202%20Weeks)/data_structures.js';
+
+
 // Find GCD (Greatest Common Divisor)
 // Given two numbers, find their GCD using a loop.
 
@@ -69,3 +72,43 @@ function maxOfThree(a, b, c) {
 
 console.log(maxOfThree(10, 20, 15)); 
 console.log(maxOfThree(5, 8, 12));
+
+
+
+// Check Even or Odd
+// Create a function isEven(number) that returns true if the number is even and false otherwise.
+
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isEven(1));
+
+
+// Count Vowels in a String
+// Write a function countVowels(str) that takes a string and returns the number of vowels in it.
+
+function countVowels(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (checkElements(str[i])) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels("hello"));  
+console.log(countVowels("world"));  
+
+
+// Check if a Number is Prime
+// Write a function isPrime(n) that returns true if n is a prime number and false otherwise.
+
+function isPrime(n) {
+    
+}
