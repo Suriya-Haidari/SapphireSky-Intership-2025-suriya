@@ -35,46 +35,42 @@ function findSumOfNumbers(...sumNumber) {
 
 console.log(findSumOfNumbers(2,2));
 
-
 // How do you check if an array contains a specific element?
 
-const elements = [2, "a", 3, "b"];
+const elements = [2, "a", 3, "e", "i", "o", "u"];
 
-function checkElements(element) {
+export default function checkElements(element) {    
     for (let i = 0; i < elements.length; i++) {
-
-        if(elements[i] === element){
-            element = elements[i];
+        if (elements[i] === element) {
             return true;
-        } else {
-            return false;
         }
     }
-    return element;
+    return false; 
 }
+
 
 console.log(checkElements(2));
 console.log(checkElements(20));
 
-
 // Write a function to count the occurrences of a specific element in an array.
 
 const arr = [2, 2, "suriya", 1, 1, 1];
+let occurrences = 0;
 
-function countOccurences(occurrences) {
+function countOccurences(count) {
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i] === occurrences){
-          console.log(occurrences++);
+        if(arr[i] === count){
+          occurrences++;
         }
     }
     return occurrences;
 }
 
-countOccurences(2);
+console.log(countOccurences(1));
+
 
 
 // Implement a function to find the smallest number in an array.
-
 const num = [-1, 0, 1, 2];
 
 function findSmallestNumber() {
