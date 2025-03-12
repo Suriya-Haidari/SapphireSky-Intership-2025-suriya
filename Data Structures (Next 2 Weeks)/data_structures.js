@@ -88,7 +88,7 @@ console.log(findSmallestNumber());
 // Write a function to reverse an array without using the built-in reverse() method.
 // Explain it please!
 
-function reverseArray(arr) {
+export function reverseArray(arr) {
     let start = 0;
     let end = arr.length - 1;
   

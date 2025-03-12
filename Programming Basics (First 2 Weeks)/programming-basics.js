@@ -104,24 +104,3 @@ function countVowels(str) {
 
 console.log(countVowels("hello"));  
 console.log(countVowels("world"));  
-
-
-// Check if a Number is Prime
-// Write a function isPrime(n) that returns true if n is a prime number and false otherwise.
-
-function isPrime(n) {
-    if (n <= 1) return false;   
-    if (n === 2) return true;   
-
-    // Check divisibility from 2 to sqrt(n)
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) {
-            return false;  
-        }
-    }
-
-    return true;  
-}
-
-console.log(isPrime(11)); 
-console.log(isPrime(4));   
