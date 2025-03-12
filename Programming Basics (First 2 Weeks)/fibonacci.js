@@ -6,12 +6,12 @@ function fibonacci(n) {
     for (let i = 2; i <= n; i++) {
         let next = a + b;  
         a = b; 
-        b = next; 
+        b = next;
     }
     return b; 
 }
 
-console.log(fibonacci(10));  
+console.log(fibonacci(10));
 
 
 

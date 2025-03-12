@@ -11,7 +11,7 @@ function decimalToBinary(n) {
     return binary;
 }
 
-
+// Test funciton
 
 function testDecimalToBinary(n, expected) {
     const result = decimalToBinary(n);
@@ -19,7 +19,7 @@ function testDecimalToBinary(n, expected) {
 }
 
 // Test cases for Decimal to Binary
-testDecimalToBinary(10, '1010');  // 10 in binary is 1010
-testDecimalToBinary(5, '101');    // 5 in binary is 101
-testDecimalToBinary(16, '10000'); // 16 in binary is 10000
-testDecimalToBinary(0, '0');      // 0 in binary is 0
+testDecimalToBinary(10, '1010');
+testDecimalToBinary(5, '101');    
+testDecimalToBinary(16, '10000');
+testDecimalToBinary(0, '0');
