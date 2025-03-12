@@ -3,7 +3,6 @@
 // Use switch to determine whether it is a vowel or a consonant.
 
 
-
 function vowelConsomant2(letter) {
     let res;
     letter = letter.toLowerCase(); 
