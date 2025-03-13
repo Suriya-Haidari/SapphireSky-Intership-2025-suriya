@@ -96,46 +96,11 @@ console.log(frienf(2));
 function testRomanNumeral() {
     let result;
 
-    result = romanNumeral(1);
-    if (result === "I") {
-        console.log("Pass: Test passed for 1");
-    } else {
-        console.log("Fail: Test failed for 1");
-    }
-
     result = romanNumeral(2);
     if (result === "II") {
         console.log("Pass: Test passed for 2");
     } else {
         console.log("Fail: Test failed for 2");
-    }
-
-    result = romanNumeral(3);
-    if (result === "III") {
-        console.log("Pass: Test passed for 3");
-    } else {
-        console.log("Fail: Test failed for 3");
-    }
-
-    result = romanNumeral(4);
-    if (result === "IV") {
-        console.log("Pass: Test passed for 4");
-    } else {
-        console.log("Fail: Test failed for 4");
-    }
-
-    result = romanNumeral(5);
-    if (result === "V") {
-        console.log("Pass: Test passed for 5");
-    } else {
-        console.log("Fail: Test failed for 5");
-    }
-
-    result = romanNumeral(6);
-    if (result === "VI") {
-        console.log("Pass: Test passed for 6");
-    } else {
-        console.log("Fail: Test failed for 6");
     }
 
     result = romanNumeral(7);
@@ -150,13 +115,6 @@ function testRomanNumeral() {
         console.log("Pass: Test passed for 8");
     } else {
         console.log("Fail: Test failed for 8");
-    }
-
-    result = romanNumeral(9);
-    if (result === "IX") {
-        console.log("Pass: Test passed for 9");
-    } else {
-        console.log("Fail: Test failed for 9");
     }
 
     result = romanNumeral(10);

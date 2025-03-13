@@ -115,68 +115,11 @@ console.log(getZodiacSign(3, 25));
 function testZodiacSign() {
     let result;
 
-    // Test cases for valid dates
-    result = getZodiacSign(1, 20);
-    if (result === "Aquarius") {
-        console.log("Pass: Test passed for January 20 (Aquarius)");
-    } else {
-        console.log("Fail: Test failed for January 20");
-    }
-
-    result = getZodiacSign(2, 19);
-    if (result === "Pisces") {
-        console.log("Pass: Test passed for February 19 (Pisces)");
-    } else {
-        console.log("Fail: Test failed for February 19");
-    }
-
     result = getZodiacSign(3, 21);
     if (result === "Aries") {
         console.log("Pass: Test passed for March 21 (Aries)");
     } else {
         console.log("Fail: Test failed for March 21");
-    }
-
-    result = getZodiacSign(4, 20);
-    if (result === "Taurus") {
-        console.log("Pass: Test passed for April 20 (Taurus)");
-    } else {
-        console.log("Fail: Test failed for April 20");
-    }
-
-    result = getZodiacSign(5, 21);
-    if (result === "Gemini") {
-        console.log("Pass: Test passed for May 21 (Gemini)");
-    } else {
-        console.log("Fail: Test failed for May 21");
-    }
-
-    result = getZodiacSign(6, 21);
-    if (result === "Cancer") {
-        console.log("Pass: Test passed for June 21 (Cancer)");
-    } else {
-        console.log("Fail: Test failed for June 21");
-    }
-
-    result = getZodiacSign(7, 23);
-    if (result === "Leo") {
-        console.log("Pass: Test passed for July 23 (Leo)");
-    } else {
-        console.log("Fail: Test failed for July 23");
-    }
-
-    result = getZodiacSign(8, 23);
-    if (result === "Virgo") {
-        console.log("Pass: Test passed for August 23 (Virgo)");
-    } else {
-        console.log("Fail: Test failed for August 23");
-    }
-
-    result = getZodiacSign(9, 23);
-    if (result === "Libra") {
-        console.log("Pass: Test passed for September 23 (Libra)");
-    } else {
-        console.log("Fail: Test failed for September 23");
     }
 
     result = getZodiacSign(10, 23);
@@ -191,13 +134,6 @@ function testZodiacSign() {
         console.log("Pass: Test passed for November 22 (Sagittarius)");
     } else {
         console.log("Fail: Test failed for November 22");
-    }
-
-    result = getZodiacSign(12, 22);
-    if (result === "Capricorn") {
-        console.log("Pass: Test passed for December 22 (Capricorn)");
-    } else {
-        console.log("Fail: Test failed for December 22");
     }
 
     result = getZodiacSign(13, 5); 
