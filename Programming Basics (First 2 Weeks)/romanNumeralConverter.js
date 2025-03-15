@@ -46,7 +46,7 @@ console.log(romanNumeral(10));
 
 
 // Second way:
-function test(num) {
+function romanNumeralSecondWay(num) {
     const romanNum = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
     switch (num) {
           case 1:
@@ -76,11 +76,11 @@ function test(num) {
             return romanNum
         }
 
-console.log(test(2));
+console.log(romanNumeralSecondWay(2));
 
 
 // Third way but without using switch:
-function frienf(num) {
+function romanNumeralThirdWay(num) {
     const romanNum = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
     if (num >= 1 && num <= 10) {
         return romanNum[num - 1];
@@ -89,7 +89,7 @@ function frienf(num) {
     }
 }
 
-console.log(frienf(2));
+console.log(romanNumeralThirdWay(2));
 
 
 // Test function 
