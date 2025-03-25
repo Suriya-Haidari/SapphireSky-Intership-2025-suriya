@@ -1,26 +1,28 @@
 // How do you merge two sorted arrays into one sorted array?
-
-// first way:
-const firstArray = [1, 2 ,3 ,4 ,5];
-const secondArray = [6, 7, 8, 9, 10];
-
-const mergeSortedArrays = [...firstArray, ...secondArray];
-
-console.log(mergeSortedArrays);
-
-
-// Second way:
-const arrayOne = [1, 2 ,3 ,4 ,5];
-const arrayTwo = [6, 7, 8, 9, 10];
-
-const mergedArrays = arrayOne + "," + arrayTwo;
-
-console.log(mergedArrays);
-
-
-// Third way:
-function mergeArrays(firstSortedArray, secondArray) {
-    return firstSortedArray + "," + secondArray;
-}
-
-console.log(mergeArrays([1, 2 ,3 ,4 ,5], [6, 7, 8, 9, 10]));
+function mergeSortedArrays(arr1, arr2) {
+    let i = 0, j = 0;
+    let result = [];
+  
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] < arr2[j]) {
+        result.push(arr1[i]);
+        i++;
+      } else {
+        result.push(arr2[j]);
+        j++;
+      }
+    }
+  
+    // Add remaining elements (if any)
+    while (i < arr1.length) result.push(arr1[i++]);
+    while (j < arr2.length) result.push(arr2[j++]);
+  
+    return result;
+  }
+  
+  // Example
+  const firstArray = [1, 4, 6, 8, 9];
+  const secondArray = [2, 3, 5, 6, 8, 9];
+  
+  console.log(mergeSortedArrays(firstArray, secondArray));
+  
